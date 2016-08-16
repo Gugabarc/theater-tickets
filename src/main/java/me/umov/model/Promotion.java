@@ -2,6 +2,11 @@ package me.umov.model;
 
 import java.util.Map;
 
+/**
+ * 
+ * @author gustavo.miranda
+ * Represents a promotion, with a day (or day type) and a list of profiles with discount in that day
+ */
 public class Promotion {
 
 	private DiscountDayEnum discountDay;

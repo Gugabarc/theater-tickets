@@ -1,5 +1,11 @@
 package me.umov.model;
 
+/**
+ * 
+ * @author gustavo.miranda
+ * 
+ * Represents the day of the promotion
+ */
 public enum DiscountDayEnum {
 	
 	SUNDAY(1),
@@ -21,6 +27,11 @@ public enum DiscountDayEnum {
 		return this.code;
 	}
 	
+	/**
+	 * Get the enum that matches the param code
+	 * @param code
+	 * @return
+	 */
 	public static DiscountDayEnum forCode(Integer code) {
 		for (DiscountDayEnum type : DiscountDayEnum.values()) {
 			if (type.getCode().equals(code)) {
@@ -28,6 +39,31 @@ public enum DiscountDayEnum {
 			}
 		}
 		return null;
+	}
+	
+	/**
+	 * Return if param is a valid value
+	 * 
+	 * @param discountDay
+	 * @return
+	 */
+	public static boolean isDayValid(DiscountDayEnum discountDay) {
+		boolean isValid = true;
+		
+		if(discountDay == null){
+			isValid = false;
+		}
+		
+		return isValid;
+	}
+	
+	/**
+	 * Opposite to {@link #isDayValid(DiscountDayEnum)}
+	 * @param discountDay
+	 * @return
+	 */
+	public static boolean isDayInvalid(DiscountDayEnum discountDay) {
+		return !isDayValid(discountDay);
 	}
 
 }

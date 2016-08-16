@@ -4,20 +4,39 @@ import java.util.List;
 
 import javax.money.MonetaryAmount;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import me.umov.dao.PromotionDAO;
 import me.umov.model.BuyerProfileEnum;
 import me.umov.model.DiscountDayEnum;
 import me.umov.model.Promotion;
 
+/**
+ * 
+ * @author gustavo.miranda
+ * Service class for promotions
+ */
+@Service
 public class PromotionService {
 	
+	@Autowired
 	private PromotionDAO promotionDAO;
+	
+	@Autowired
 	private PriceService priceService;
 	
 	public PromotionService(){
 	}
 	
-	public MonetaryAmount calculeDiscount(DiscountDayEnum discountDay, BuyerProfileEnum buyerProfileEnum){
+	/**
+	 * Returns the price with the discount for the buyer profile and day params
+	 * 
+	 * @param discountDay
+	 * @param buyerProfileEnum
+	 * @return MonetaryAmount
+	 */
+	public MonetaryAmount calculateDiscount(DiscountDayEnum discountDay, BuyerProfileEnum buyerProfileEnum){
 		List<Promotion> list = promotionDAO.list();
 		Promotion promotion = null;
 		
@@ -37,21 +56,5 @@ public class PromotionService {
 		}
 		
 		return price;
-	}
-
-	public PromotionDAO getPromotionDAO() {
-		return promotionDAO;
-	}
-
-	public void setPromotionDAO(PromotionDAO promotionDAO) {
-		this.promotionDAO = promotionDAO;
-	}
-
-	public PriceService getPriceService() {
-		return priceService;
-	}
-
-	public void setPriceService(PriceService priceService) {
-		this.priceService = priceService;
 	}
 }

@@ -130,28 +130,28 @@ public class PromotionServiceTest {
 	public void calculatePriceForStudentsTest(){
 		BuyerProfileEnum student = BuyerProfileEnum.STUDENT;
 		
-		MonetaryAmount value = promotionService.calculeDiscount(DiscountDayEnum.MONDAY, student);
+		MonetaryAmount value = promotionService.calculateDiscount(DiscountDayEnum.MONDAY, student);
 		Assert.assertEquals(Money.of(13, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.TUESDAY, student);
+		value = promotionService.calculateDiscount(DiscountDayEnum.TUESDAY, student);
 		Assert.assertEquals(Money.of(13, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.WEDNESDAY, student);
+		value = promotionService.calculateDiscount(DiscountDayEnum.WEDNESDAY, student);
 		Assert.assertEquals(Money.of(10, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.THURSDAY, student);
+		value = promotionService.calculateDiscount(DiscountDayEnum.THURSDAY, student);
 		Assert.assertEquals(Money.of(13, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.FRIDAY, student);
+		value = promotionService.calculateDiscount(DiscountDayEnum.FRIDAY, student);
 		Assert.assertEquals(Money.of(13, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.SATURDAY, student);
+		value = promotionService.calculateDiscount(DiscountDayEnum.SATURDAY, student);
 		Assert.assertEquals(Money.of(20, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.SUNDAY, student);
+		value = promotionService.calculateDiscount(DiscountDayEnum.SUNDAY, student);
 		Assert.assertEquals(Money.of(20, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.HOLIDAY, student);
+		value = promotionService.calculateDiscount(DiscountDayEnum.HOLIDAY, student);
 		Assert.assertEquals(Money.of(13, "BRL"), value);
 	}
 	
@@ -159,28 +159,28 @@ public class PromotionServiceTest {
 	public void calculatePriceForKidsTest(){
 		BuyerProfileEnum kid = BuyerProfileEnum.KID;
 		
-		MonetaryAmount value = promotionService.calculeDiscount(DiscountDayEnum.MONDAY, kid);
+		MonetaryAmount value = promotionService.calculateDiscount(DiscountDayEnum.MONDAY, kid);
 		Assert.assertEquals(Money.of(9, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.TUESDAY, kid);
+		value = promotionService.calculateDiscount(DiscountDayEnum.TUESDAY, kid);
 		Assert.assertEquals(Money.of(8.5, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.WEDNESDAY, kid);
+		value = promotionService.calculateDiscount(DiscountDayEnum.WEDNESDAY, kid);
 		Assert.assertEquals(Money.of(7, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.THURSDAY, kid);
+		value = promotionService.calculateDiscount(DiscountDayEnum.THURSDAY, kid);
 		Assert.assertEquals(Money.of(10, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.FRIDAY, kid);
+		value = promotionService.calculateDiscount(DiscountDayEnum.FRIDAY, kid);
 		Assert.assertEquals(Money.of(8.9, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.SATURDAY, kid);
+		value = promotionService.calculateDiscount(DiscountDayEnum.SATURDAY, kid);
 		Assert.assertEquals(Money.of(10, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.SUNDAY, kid);
+		value = promotionService.calculateDiscount(DiscountDayEnum.SUNDAY, kid);
 		Assert.assertEquals(Money.of(10, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.HOLIDAY, kid);
+		value = promotionService.calculateDiscount(DiscountDayEnum.HOLIDAY, kid);
 		Assert.assertEquals(Money.of(10, "BRL"), value);
 	}
 	
@@ -188,28 +188,28 @@ public class PromotionServiceTest {
 	public void calculatePriceForSeniorsTest(){
 		BuyerProfileEnum senior = BuyerProfileEnum.SENIOR;
 		
-		MonetaryAmount value = promotionService.calculeDiscount(DiscountDayEnum.MONDAY, senior);
+		MonetaryAmount value = promotionService.calculateDiscount(DiscountDayEnum.MONDAY, senior);
 		Assert.assertEquals(Money.of(27, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.TUESDAY, senior);
+		value = promotionService.calculateDiscount(DiscountDayEnum.TUESDAY, senior);
 		Assert.assertEquals(Money.of(25.5, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.WEDNESDAY, senior);
+		value = promotionService.calculateDiscount(DiscountDayEnum.WEDNESDAY, senior);
 		Assert.assertEquals(Money.of(18, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.THURSDAY, senior);
+		value = promotionService.calculateDiscount(DiscountDayEnum.THURSDAY, senior);
 		Assert.assertEquals(Money.of(21, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.FRIDAY, senior);
+		value = promotionService.calculateDiscount(DiscountDayEnum.FRIDAY, senior);
 		Assert.assertEquals(Money.of(30, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.SATURDAY, senior);
+		value = promotionService.calculateDiscount(DiscountDayEnum.SATURDAY, senior);
 		Assert.assertEquals(Money.of(28.5, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.SUNDAY, senior);
+		value = promotionService.calculateDiscount(DiscountDayEnum.SUNDAY, senior);
 		Assert.assertEquals(Money.of(28.5, "BRL"), value);
 		
-		value = promotionService.calculeDiscount(DiscountDayEnum.HOLIDAY, senior);
+		value = promotionService.calculateDiscount(DiscountDayEnum.HOLIDAY, senior);
 		Assert.assertEquals(Money.of(28.5, "BRL"), value);
 	}
 

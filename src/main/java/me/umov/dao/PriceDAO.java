@@ -4,14 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.javamoney.moneta.Money;
+import org.springframework.stereotype.Repository;
 
 import me.umov.model.BuyerProfileEnum;
 import me.umov.model.Price;
 
+/**
+ * @author gustavo.miranda
+ * 
+ * Simulates connection to database
+ */
+@Repository
 public class PriceDAO {
 	
 	public static List<Price> prices;
 	
+	/**
+	 * Create valid data
+	 */
 	private void create(){
 		prices = new ArrayList<Price>();
 		
@@ -35,6 +45,10 @@ public class PriceDAO {
 		
 	}
 
+	/**
+	 * Return valid data list
+	 * @return
+	 */
 	public List<Price> list() {
 		if(prices == null){
 			create();

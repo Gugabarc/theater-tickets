@@ -2,6 +2,11 @@ package me.umov.model;
 
 import javax.money.MonetaryAmount;
 
+/**
+ * 
+ * @author gustavo.miranda
+ * Represents the price for each buyer profile
+ */
 public class Price {
 
 	private MonetaryAmount price;

@@ -4,12 +4,22 @@ import java.util.List;
 
 import javax.money.MonetaryAmount;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import me.umov.dao.PriceDAO;
 import me.umov.model.BuyerProfileEnum;
 import me.umov.model.Price;
 
+/**
+ * 
+ * @author gustavo.miranda
+ * Service class for price
+ */
+@Service
 public class PriceService {
 	
+	@Autowired
 	private PriceDAO priceDAO;
 	
 	public PriceService(){
@@ -19,6 +29,11 @@ public class PriceService {
 		return priceDAO.list();
 	}
 	
+	/**
+	 * Find the standard value for a buyer profile
+	 * @param buyerProfileEnum
+	 * @return
+	 */
 	public MonetaryAmount findValueByBuyerProfile(BuyerProfileEnum buyerProfileEnum){
 		for(Price p : priceDAO.list()){
 			if(p.getBuyerProfileEnum() == buyerProfileEnum){
@@ -26,14 +41,6 @@ public class PriceService {
 			}
 		}
 		return null;
-	}
-
-	public PriceDAO getPriceDAO() {
-		return priceDAO;
-	}
-
-	public void setPriceDAO(PriceDAO priceDAO) {
-		this.priceDAO = priceDAO;
 	}
 
 }

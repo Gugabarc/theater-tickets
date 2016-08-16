@@ -5,14 +5,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import me.umov.model.BuyerProfileEnum;
 import me.umov.model.DiscountDayEnum;
 import me.umov.model.Promotion;
 
+/**
+ * @author gustavo.miranda
+ * 
+ * Simulates connection to database
+ */
+@Repository
 public class PromotionDAO {
 	
 	public static List<Promotion> promotions;
 	
+	/**
+	 * Create valid data
+	 */
 	public void create(){
 		promotions = new ArrayList<Promotion>();
 		
@@ -90,6 +101,9 @@ public class PromotionDAO {
 		promotions.add(holidayPromo);
 	}
 
+	/**
+	 * Return valid data list
+	 */
 	public List<Promotion> list() {
 		if(promotions == null){
 			create();
