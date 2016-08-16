@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.class
+*.prefs
+.project
+*.classpath
+target/classes/META-INF/maven/me.umov/theater-tickets/pom.properties
