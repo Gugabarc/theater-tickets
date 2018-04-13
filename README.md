@@ -1,6 +1,6 @@
 # theater-tickets
 
-Exercício realizado em processo seletivo. Descrição do problema:
+Exercício realizado em processo seletivo (2016). Descrição do problema:
 
 Calcule os seguintes descontos para as entradas dado o preço dos ingressos:
 
@@ -46,3 +46,10 @@ Requisitos
 3) O que é avaliado neste processo: simplicidade x uso de patterns e boas práticas de OO. 
 
 4) Submeter a resposta usando Github ou Bitbucket.
+
+===================
+
+Melhorias
+
+- Incluir o uso de DataPoints, com o intuito de definir um input de dados a serem validados e reduzir o tamanho do código
+- Incluir o framework AssertJ para melhorar a legibilidade
